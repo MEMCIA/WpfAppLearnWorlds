@@ -28,6 +28,7 @@ namespace WpfApp2
 
         private void Start_click(object sender, RoutedEventArgs e)
         {
+            //Word1
             Close();
         }
     }
