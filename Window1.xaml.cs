@@ -17,17 +17,15 @@ namespace WpfApp2
     /// </summary>
     public partial class Window1 : Window
     {
-        MainWindow M;
-        
-        public Window1( MainWindow m)
+        Vocabulary Vocabulary1;
+        public Window1(Vocabulary vocabulary)
         {
+            Vocabulary1 = vocabulary;
             InitializeComponent();
-            M = m;
         }
 
         private void Start_click(object sender, RoutedEventArgs e)
         {
-            M.SetFirstWord();
             Close();
         }
     }
