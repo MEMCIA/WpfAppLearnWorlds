@@ -32,7 +32,8 @@ namespace WpfApp2
 
         public bool CheckIfAnswerIsCorrect(string answer)
         {
-            if (FindRightAnswer() == answer) return true;
+            string answerToLower = answer.ToLower();
+            if (FindRightAnswer() == answerToLower) return true;
             return false;
         }
     }

@@ -24,7 +24,7 @@
 
     <Grid>
 
-        <Button x:Name="StartButton" Grid.Column="1" Grid.Row="1" Height="200" Width="200" FontSize="45" Background="Honeydew" Template="{StaticResource roundbutton}"  Click="Start_click">START</Button>
+        <Button x:Name="StartButton" Grid.Column="1" Grid.Row="1" Height="300" Width="300" FontSize="60" Background="Honeydew" Foreground="YellowGreen" Template="{StaticResource roundbutton}"  Click="Start_click">START</Button>
 
     </Grid>
 </Window>

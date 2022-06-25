@@ -47,11 +47,11 @@ namespace WpfApp2
         {
             if (vocabulary.CheckIfAnswerIsCorrect(answer))
             {
-                Word2.Background = Brushes.LawnGreen;
+                Word2.Background = Brushes.YellowGreen;
             }
             else
             {
-                Word2.Background = Brushes.PaleVioletRed;
+                Word2.Background = Brushes.IndianRed;
             }
         }
 
@@ -60,7 +60,7 @@ namespace WpfApp2
             Answer.Clear();
             Word2.Items.Clear();
             Word1.Items.Clear();
-            Word2.Background = Brushes.Transparent;
+            Word2.Background = Brushes.White;
         }
 
         private void ButtonNextWord_Click(object sender, RoutedEventArgs e)
