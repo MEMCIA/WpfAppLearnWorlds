@@ -26,8 +26,13 @@ namespace WpfApp2
         {
             InitializeComponent();
 
-            var window = new Window1();
+            var window = new Window1(this);
             window.ShowDialog();
+
+        }
+
+        public void SetFirstWord()
+        {
 
         }
 
