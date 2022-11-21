@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Vocabulary" Height="230" Width="500">
+        Title="Vocabulary" Height="170" Width="500">
     
     <Window.Resources>
         <ControlTemplate x:Key="colorChanging" TargetType="Button">
@@ -46,9 +46,8 @@
         <ListBox  x:Name="Word2"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Height="25" Width="135" VerticalAlignment="Top"></ListBox>
 
         <StackPanel Grid.Column="2" Grid.Row="1" >
-            <TextBox x:Name="Answer" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Width="135" />
-            <Button x:Name="btnAnswer" Margin ="10" Foreground="YellowGreen" Template="{StaticResource colorChanging}"  Width="100" Background="White" FontWeight="Bold" Click="ButtonCheck_Click">Check!</Button>
-            <Button x:Name="btnNextWord" Foreground="YellowGreen" Template="{StaticResource colorChanging}" Width="100" Background="White" Click="ButtonNextWord_Click">Next Word</Button>
+            <TextBox x:Name="Answer" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Width="135" KeyDown="OnKeyDownHandler"/>
+            <Button x:Name="btnNextWord" Foreground="YellowGreen" Template="{StaticResource colorChanging}" Width="100" Background="White" FontWeight="Bold" Click="ButtonNextWord_Click">Next Word</Button>
         </StackPanel> 
         
     </Grid>

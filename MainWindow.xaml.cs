@@ -31,18 +31,6 @@ namespace WpfApp2
             
         }
 
-        private void ButtonCheck_Click(object sender, RoutedEventArgs e)
-        {
-            string answer = Answer.Text;
-            if (!string.IsNullOrWhiteSpace(answer))
-            {
-                Word2.Items.Clear();
-                string wordInItalian = vocabulary.FindRightAnswer();
-                Word2.Items.Add(wordInItalian);
-                ChangeBackgroundOfWord2(answer);
-            }
-        }
-
         void ChangeBackgroundOfWord2(string answer)
         {
             if (vocabulary.CheckIfAnswerIsCorrect(answer))
@@ -68,6 +56,21 @@ namespace WpfApp2
             PrepareAllSpacesForNextRound();
             string wordInPolish = vocabulary.FindNextPairOfWords().Key;
             Word1.Items.Add(wordInPolish);
+        }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Return)
+            {
+                string answer = Answer.Text;
+                if (!string.IsNullOrWhiteSpace(answer))
+                {
+                    Word2.Items.Clear();
+                    string wordInItalian = vocabulary.FindRightAnswer();
+                    Word2.Items.Add(wordInItalian);
+                    ChangeBackgroundOfWord2(answer);
+                }
+            }
         }
     }
 }
